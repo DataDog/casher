@@ -7,7 +7,7 @@ class Casher
   include FileUtils
 
   def initialize
-    @casher_dir = ENV['CASHER_DIR'] || File.expand_path(".casher", ENV["HOME"])
+    @casher_dir = ENV['DD_CASHER_DIR'] || File.expand_path(".casher", ENV["HOME"])
     @mtime_file = File.expand_path('mtime.yml', @casher_dir)
     @fetch_tar  = File.expand_path('fetch.tbz', @casher_dir)
     @push_tar   = File.expand_path('push.tbz', @casher_dir)
